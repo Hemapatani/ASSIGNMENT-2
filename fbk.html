@@ -1,0 +1,155 @@
+</html>
+<head>
+ <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+		rel='stylesheet'>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" >
+	</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" >
+	</script>
+	
+<style>
+
+  $shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+
+* { font-family: 'Roboto', sans-serif; }
+.bg-img {
+  /* The image used */
+  background-image: url("h1.avif");
+  background-repeat: repeat;
+
+  min-height: 380px;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+input, button, textarea {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image:none;
+    background-color: #dadad3;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    min-height: 50px;
+    resize:vertical;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.feedback {
+    &-card {
+        border: 1px solid black;
+        max-width: 980px;
+        background-color:gray;
+        margin: 0 auto;
+        box-shadow: $shadow;
+    }
+    &-header {
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom: 1px solid black;
+    }
+    &-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        &__message {
+            margin-top: 10px;            
+        }
+        #tex-filter-form-container{
+            border:1px solid black;
+        }
+        button {
+            margin-top: 10px;
+            align-self: flex-end;
+        }
+    }
+}
+
+
+</style>
+</head>
+<script>
+		$(document).ready(function() {
+		
+			$(function() {
+				$( "#my_date_picker" ).datepicker();
+			});
+		})
+	</script>
+	<script>
+$(document).ready(function(){
+  $("#button").hover(function(){
+    $(this).css("font-size","50px");
+});
+});
+</script>
+<script> 
+$(document).ready(function(){
+  $("#button").click(function(){
+    $("input").animate({
+      height: '15px'
+    });
+  });
+});
+</script> 
+<script>$( "#myselect" ).val();
+</script>
+<div id="tex-filter-form-container">
+<br><br><h1 align="center"> FEEDBACK FORM </h1>
+<body style="background-: gray;" class="bg-img">
+<form action="#" method="post" enctype="text/plain" align="center"><br><br>
+Name:<input type="text" placeholder="Enter Your Name" Required ><br><br>
+Email: <input type="text"  placeholder="Email" Required><br><br>
+
+Contact:<input type="text" placeholder="Mobile No.(optional)"Required ><br><br>
+Date: <input type="text" id="my_date_picker"placeholder="select date"><br><br>
+Feedback:<br> <textarea rows="6" cols="50" placeholder="write your feedback here" Required>
+</textarea>
+  <fieldset>
+    <legend>Give ratings</legend>
+	 <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-1">1</label>
+	<input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-2">2</label>
+	<input type="radio" name="radio-1" id="radio-3">
+    <label for="radio-3">3</label>
+    <input type="radio" name="radio-1" id="radio-4">
+	<label for="radio-4">4</label>
+    <input type="radio" name="radio-1" id="radio-5">
+	<label for="radio-5">5</label
+  </fieldset>
+  <br><br><div>
+  <select id="myselect">
+    <option value="1">Organic foods</option>
+    <option value="2">Spinach</option>
+    <option value="3">Blueberries</option>
+    <option value="4">Green Beans</option>
+    <option value="5">Nectarines</option>
+	<option value="5">Strawberries</option>
+</select></div><br><br>
+<button id="button"> submit </button>
+</form>
+</body></div>
+</html
